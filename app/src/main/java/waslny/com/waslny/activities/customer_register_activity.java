@@ -162,8 +162,7 @@ public class customer_register_activity extends AppCompatActivity implements Vie
                         map.put("name", name);
                         map.put("email", customer_email);
                         map.put("age",customer_age);
-                        map.put("image","");
-                        map.put("thumb_image","");
+                        map.put("image","default");
 
                         //set the map in database
                         databaseReference.setValue(map).addOnCompleteListener(new OnCompleteListener<Void>() {

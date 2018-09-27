@@ -44,6 +44,7 @@ import java.util.HashMap;
 import java.util.List;
 
 import waslny.com.waslny.R;
+import waslny.com.waslny.activities.Customer_Settings;
 import waslny.com.waslny.activities.MainActivity;
 
 public class customer_map extends FragmentActivity implements OnMapReadyCallback, GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener, LocationListener {
@@ -53,6 +54,7 @@ public class customer_map extends FragmentActivity implements OnMapReadyCallback
     private Location lastLocation;
     private LocationRequest locationRequest;
     private Button logout;
+    private Button Settings;
     private Button request;
     private boolean available;
     private LatLng pickupLocation;
@@ -83,6 +85,15 @@ public class customer_map extends FragmentActivity implements OnMapReadyCallback
                 .findFragmentById(R.id.map);
 
         mapFragment.getMapAsync(this);
+
+
+        Settings=(Button)findViewById(R.id.customer_settings);
+        Settings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), Customer_Settings.class));
+            }
+        });
 
         logout = (Button) findViewById(R.id.customer_logout);
         logout.setOnClickListener(new View.OnClickListener() {

@@ -50,7 +50,8 @@
             android:label="driver register" />
         <activity
             android:name=".Maps.customer_map"
-            android:label="@string/title_activity_customer_map"></activity>
+            android:label="@string/title_activity_customer_map" />
+        <activity android:name=".activities.Customer_Settings"></activity>
     </application>
 
 </manifest>
